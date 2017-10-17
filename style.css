@@ -52,23 +52,36 @@ main {
   padding: 0 20px;
 }
 
+
 #modal {
   background: white;
   padding: 20px;
   text-align: center;
-  width: 220px;
+  width: 230px;
   position: relative;
-  top: 50%;
+  margin: auto;
+  height: 230px;
+  /*top: 50%;
   left: 50%;
-  transform: translate3d(-50%, -50%, 0); /*essa função deixa o modal bem no meio; é uma transformação de elementos, como girar, distorcer, etc (usa mais para animação); o translate3d centraliza de acordo com a ponta do modal; "centraliza elemento absoluto"*/
+  transform: translate3d(-50%, -50%, 0); essa função deixa o modal bem no meio; é uma transformação de elementos, como girar, distorcer, etc (usa mais para animação); o translate3d centraliza de acordo com a ponta do modal; "centraliza elemento absoluto"*/
 }
 
 #modal > img {
-  width: 100px;
+  width: 150px;
 }
 
 #modal.visivel {
   display: block;
+}
+
+.box-email{
+  border: 2px dotted rebeccapurple;
+  border-radius: 5px;
+}
+
+.box-senha{
+  border: 2px dotted rebeccapurple;
+  border-radius: 5px;
 }
 
 #fundo {
@@ -82,7 +95,8 @@ main {
 }
 
 #fundo.visivel {
-  display: block;
+  /*display: block;*/
+  display: flex;
 }
 
 #fechar {
@@ -103,7 +117,8 @@ main {
 }
 
 input {
-  margin-bottom: 8px;
+  padding-left: 8px;
+  margin-bottom: 15px;
 }
 
 .logar {
@@ -112,4 +127,63 @@ input {
   color: white;
   border-radius: 2px;
   border-color: rebeccapurple;
+}
+
+/* para tornar a borda vermelha após erro na digitação do email */
+.erro {
+  border: 5px solid darkred;
+  animation: shake 0.2s;  /*qual a animação do keyframes, tempo e repetição */
+}
+
+/* o keyframes deixa animado */
+@keyframes shake {
+  0% {
+    transform: none;
+  }
+  33% {
+    transform: translateX(-5px);
+  }
+  66% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+#player {
+  background: rgba(0, 0, 0, .6);
+  display: flex;
+  text-align: center;
+}
+
+.player-tempo {
+  display: flex;
+  align-items: center;
+}
+
+.player-tempo span{
+  margin: 0 8px;
+}
+
+.player-barra {
+  flex-grow: 1;
+  background: #777;
+  height: 5px;
+}
+
+.musica {
+  flex-grow: 1;
+}
+
+.tocado {
+  background: white;
+  /*width: 40%;*/
+  height: 5px;
+}
+
+.botao-play {
+  background: none;
+  border: none;
+  margin-bottom: 10px;
 }
