@@ -20,6 +20,24 @@
     </nav>
   </header>
 
+  <section>
+    <div class="slider">
+      <ul>
+        <li class="slider-item active">
+          <img src="trending.jpg" alt="Playlist Trending">
+        </li>
+        <li class="slider-item">
+          <img src="top50mundo.jpg" alt="Playlist Top 50 Mundo">
+        </li>
+      </ul>
+      <div class="controles">
+        <button id="anterior"><</button>
+        <button id="proximo">></button>
+      </div>
+    </div>
+  </section>
+
+
   <main>
     <div id="player">
       <!--capa do álbum-->
@@ -40,7 +58,7 @@
               </svg>
           </button>
 
-        <!--"controls" antes de src = aplica caixa de volume e afins para tocar o áudio; se no console eu colocar audio.play() consigo testar no inspecionar também--> 
+          <!--"controls" antes de src = aplica caixa de volume e afins para tocar o áudio; se no console eu colocar audio.play() consigo testar no inspecionar também-->
           <audio src="https://p.scdn.co/mp3-preview/1d9fe8b793a54f64d43f6413754de5755551f5cd?cid=8897482848704f2a8f8d7c79726a70d4"></audio>
 
           <!--tempo da música-->
@@ -60,6 +78,7 @@
   </main>
   <script src="player.js"></script>
   <script src="auth.js"></script>
+  <script src="slider.js"></script>
 </body>
 
 </html>

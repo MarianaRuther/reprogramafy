@@ -27,9 +27,9 @@ fundo.onclick = function (event) {
 //login
 
 var email = document.getElementById("email");
-console.log("email");
 
-var senha = document.getElementById("#senha");
+
+var senha = document.querySelector("#senha");
 
 var formulario = document.querySelector("form"); // vou informar que eu quero um formulário específico
 formulario.onsubmit = function () {
