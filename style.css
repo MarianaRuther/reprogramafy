@@ -8,6 +8,7 @@ html, body {
 }
 
 body {
+  color: white;
   font-family: sans-serif;
   height: 100%;
   background: url('bg.jpg') no-repeat;
@@ -231,4 +232,27 @@ input {
 
 .slider-item.active {
   display: block;
+}
+
+#playlist ul {
+  padding: 0;
+}
+
+#playlist li {
+  list-style: none;
+  padding: 12px;
+}
+
+/* 
+par = even (pega os filhos números pares)
+ímpar - odd (pega os filhos números ímpares)
+*/
+
+#playlist li:nth-child(odd) {  /*() indica um elemento(filho)*/
+  background: rgba(0,0,0,.5);
+}
+
+#playlist h3 {  
+  margin: 0;
+  margin-bottom: 4px;
 }
