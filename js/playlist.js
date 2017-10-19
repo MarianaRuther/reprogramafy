@@ -86,14 +86,44 @@ for (var i = 0; i < playlist.length; i++) {
     var li = document.createElement('li');
     var h3 = document.createElement('h3');
     var spanAlbum = document.createElement('span');
+    var spanArtistas = document.createElement('span');
 
     h3.innerText = playlist[i].name;
     spanAlbum.innerText = playlist[i].album.name;
+    spanArtistas.innerText = playlist[i].artists;
 
     spanAlbum.classList.add('album');
+    spanArtistas.classList.add('artistas');
+
+    li.setAttribute('data-id', i);  //<li data-id="i"></li>
+
 
     li.appendChild(h3);
-    li.appendChild(spanAlbum);    
+    //<li>
+    //  <h3>...</h3>
+    //</li>
+
+    li.appendChild(spanAlbum);
+    //<li>
+    //  <h3>...</h3>
+    //</li> 
+
+    li.appendChild(spanArtistas);
+    //<li>
+    //  <h3>...</h3>
+    //  <span class="album">...</span>
+    //</li> 
 
     playlistUl.appendChild(li);
+
+    li.onclick = mudarMusica;
 }
+
+function mudarMusica() {
+    var id = this.getAttribute('data-id');
+    var audio = document.querySelector('audio');
+    audio.src = playlist[id].preview_url;
+    audio.play();
+    console.log(playlist[id]);
+}
+
