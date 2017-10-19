@@ -235,6 +235,10 @@ input {
   display: block;
 }
 
+#playlist {
+  padding: 40px;
+}
+
 #playlist ul {
   padding: 0;
 }
@@ -242,6 +246,7 @@ input {
 #playlist li {
   list-style: none;
   padding: 12px;
+  transition: 0.2s;
 }
 
 /* 
@@ -256,4 +261,9 @@ par = even (pega os filhos números pares)
 #playlist h3 {  
   margin: 0;
   margin-bottom: 4px;
+}
+
+#playlist li.active {
+  transform: scale(1.05);
+  box-shadow: 2px 2px 2px rgba(0,0,0,.2); 
 }
