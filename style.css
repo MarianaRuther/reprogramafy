@@ -55,9 +55,9 @@ main {
 }
 
 
-#modal {
+#modal, #modalCadastro {
   background: white;
-  padding: 20px;
+  padding: 15px;
   text-align: center;
   width: 230px;
   position: relative;
@@ -68,12 +68,17 @@ main {
   transform: translate3d(-50%, -50%, 0); essa função deixa o modal bem no meio; é uma transformação de elementos, como girar, distorcer, etc (usa mais para animação); o translate3d centraliza de acordo com a ponta do modal; "centraliza elemento absoluto"*/
 }
 
-#modal > img {
-  width: 150px;
+#modal > img, #modalCadastro > img  {
+  width: 120px;
 }
 
-#modal.visivel {
+#modal.visivel, #modalCadastro.visivel  {
   display: block;
+}
+
+.box-usuario {
+  border: 2px dotted rebeccapurple;
+  border-radius: 5px;
 }
 
 .box-email{
@@ -86,7 +91,7 @@ main {
   border-radius: 5px;
 }
 
-#fundo {
+#fundo , #fundoCadastro {
   position: fixed;
   top: 0;
   left: 0;
@@ -96,12 +101,12 @@ main {
   display: none;
 }
 
-#fundo.visivel {
+#fundo.visivel, #fundoCadastro.visivel {
   /*display: block;*/
   display: flex;
 }
 
-#fechar {
+#fechar, #fecharCadastro {
   color: dimgrey;
   background: transparent;
   border: none;
@@ -110,7 +115,7 @@ main {
   right: 10px;
 }
 
-#fechar:hover {
+#fechar:hover, #fecharCadastro:hover  {
   cursor: pointer;
 }
 
@@ -124,7 +129,15 @@ input {
 }
 
 .logar {
-  margin-left: 113px;
+  margin-left: 125px;
+  background-color: rebeccapurple;
+  color: white;
+  border-radius: 2px;
+  border-color: rebeccapurple;
+}
+
+.cadastrar {
+  margin-left: 100px;
   background-color: rebeccapurple;
   color: white;
   border-radius: 2px;
